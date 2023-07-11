@@ -33,7 +33,7 @@ public class CartPageTest extends BaseTest{
         homePage.navigateToCartPage();
         cartPage.verifyProductIsAddINCart();
         cartPage.verifyPrice();
-        //////123
+      
 
 
     }
