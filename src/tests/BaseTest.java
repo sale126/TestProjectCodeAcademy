@@ -40,13 +40,15 @@ public class BaseTest {
       ChromeOptions options = new ChromeOptions();
       options.addArguments("--remote-allow-origins=*");
       // options.addArguments("--ignore-certificate-errors");
-      // options.addArguments("--start-maximized");
+
+      //rasiri browser po celom ekranu(ovaj arguments radi samo u Chromu)
+      options.addArguments("--start-maximized");
+      
       // options.addArguments("--allow-running-insecure-content");
      //  options.addArguments("--disable-web-security");
      //  options.addArguments("--allow-insecure-localhost");
 
 
-       //rasiri browser po celom ekranu(ovaj arguments radi samo u Chromu)
       
      // options.setAcceptInsecureCerts(true);
       //DesiredCapabilities desiredCap= new DesiredCapabilities();

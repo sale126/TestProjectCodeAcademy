@@ -29,7 +29,7 @@ public class CartPageTest extends BaseTest{
         whatsNewPage.navigateToShortsBottomsMen();
         shortsMenPage.navigateToProductPage();
         productPage.addProductToCart();
-        Thread.sleep(2000);//sacekaj 2 sekunde da se product ucita u korpu
+        Thread.sleep(3000);//sacekaj 2 sekunde da se product ucita u korpu
         homePage.navigateToCartPage();
         cartPage.verifyProductIsAddINCart();
         cartPage.verifyPrice();
