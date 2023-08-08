@@ -3,10 +3,10 @@ package tests;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 //import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 //import org.openqa.selenium.remote.DesiredCapabilities;
 //import org.openqa.selenium.Capabilities;
 
@@ -37,7 +37,8 @@ public class BaseTest {
     @Before //Anotacija koja ce ovu metodu pokretati pre svakok testa
     public void setUp(){
 
-      // options = new ChromeOptions();
+      ChromeOptions options = new ChromeOptions();
+      options.addArguments("--remote-allow-origins=*");
       // options.addArguments("--ignore-certificate-errors");
       // options.addArguments("--start-maximized");
       // options.addArguments("--allow-running-insecure-content");
@@ -56,10 +57,10 @@ public class BaseTest {
       //options.merge(desiredCap);
 
             
-      // driver = new ChromeDriver(options);
+      driver = new ChromeDriver(options);
 
         
-        driver = new FirefoxDriver();
+        //driver = new FirefoxDriver();
         driver.manage().window().maximize();
 
         

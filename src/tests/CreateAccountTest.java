@@ -23,7 +23,7 @@ public class CreateAccountTest extends BaseTest{
         homePage.goToBaseUrl();
         homePage.navigateToCreateAccount();
         createAccountPage.fillOutInformaion(firstName, lastName, email, password, confirmpassword);
-        Thread.sleep(1000);//saceksj 1 sekundu da se ucitaju podaci
+        Thread.sleep(2000);//saceksj 2 sekundu da se ucitaju podaci
         createAccountPage.clikCreateAccount();
         createAccountPage.validateThatAccountIsCreated();        
         createAccountPage.navigateToAddAdress();
